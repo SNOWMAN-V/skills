@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Goal Lock"
+  short_description: "Lock goals with memory and boundary control"
+  default_prompt: "Capture and freeze the project objective, build a stable goal memory capsule, and block out-of-bound execution unless approved changes are confirmed."
