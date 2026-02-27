@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Mainline Progress"
+  short_description: "Mainline-first progress tracking with optional branches"
+  default_prompt: "Track project progress toward the final goal using mainline nodes, keep branches collapsed by default, and output both a concise text panel and Mermaid timeline."
