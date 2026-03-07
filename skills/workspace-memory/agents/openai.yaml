@@ -1,0 +1,5 @@
+interface:
+  display_name: "Workspace Memory"
+  short_description: "Create and consult per-workspace daily memory notes."
+  default_prompt: "Use $workspace-memory to read the latest workspace memory, brief me on progress, and save today's key work notes."
+
