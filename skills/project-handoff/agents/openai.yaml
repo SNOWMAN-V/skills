@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Handoff"
+  short_description: "Prepare or refresh a reusable project handoff file"
+  default_prompt: "Prepare a project handoff for the current work so another Codex session can resume quickly."
