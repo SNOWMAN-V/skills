@@ -1,0 +1,16 @@
+# Workflow OS local-only paths
+memory/**
+outputs/**
+runtime/**
+imports/opensource/**
+
+data/*.db
+data/*.db-*
+data/*.sqlite
+data/*.sqlite-*
+
+config/local.*
+.env*
+*.pem
+*.key
+*.p12

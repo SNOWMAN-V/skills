@@ -1,0 +1,143 @@
+﻿{
+  "version": 1,
+  "generated_at": "2026-03-11",
+  "workspace_root": "D:\\skills\\workflow-os",
+  "skills_source_root": "D:\\skills\\skills",
+  "default_output_pattern": "D:\\skills\\workflow-os\\outputs\\skills\\{skill_slug}\\",
+  "skills": [
+    {
+      "skill_id": "central_router",
+      "recommended_slug": "central-router",
+      "display_name": "Central Router",
+      "skill_path": "D:\\skills\\skills\\central_router",
+      "description": "Top-level routing and approval gate for complex requests.",
+      "resource_dirs": [],
+      "ui_metadata_path": null,
+      "managed_output": {
+        "mode": "optional-persisted-plans",
+        "root": "D:\\skills\\workflow-os\\outputs\\skills\\central-router\\dispatch-plans",
+        "notes": "Persist approved routing plans only when a durable execution record is useful."
+      },
+      "notes": [
+        "Current folder naming is inconsistent with hyphen-case conventions.",
+        "Acts as the Workflow OS front door and dispatch layer."
+      ]
+    },
+    {
+      "skill_id": "daily_planner",
+      "recommended_slug": "daily-planner",
+      "display_name": "Daily Schedule Planner",
+      "skill_path": "D:\\skills\\skills\\daily_planner",
+      "description": "Generate or suggest a daily schedule from fixed commitments, study plans, and ideas.",
+      "resource_dirs": [],
+      "ui_metadata_path": null,
+      "managed_output": {
+        "mode": "managed-output",
+        "root": "D:\\skills\\workflow-os\\outputs\\skills\\daily-planner\\plans",
+        "notes": "Store durable schedule outputs here when the user wants the plan saved."
+      },
+      "notes": [
+        "Needs future metadata normalization.",
+        "Good candidate for SQLite-backed schedule memory later."
+      ]
+    },
+    {
+      "skill_id": "openclaw-security-audit",
+      "recommended_slug": "openclaw-security-audit",
+      "display_name": "OpenClaw Security Audit",
+      "skill_path": "D:\\skills\\skills\\openclaw-security-audit",
+      "description": "Audit local OpenClaw security posture and produce low-risk hardening reports.",
+      "resource_dirs": ["agents", "references", "reports"],
+      "ui_metadata_path": "D:\\skills\\skills\\openclaw-security-audit\\agents\\openai.yaml",
+      "managed_output": {
+        "mode": "managed-output",
+        "root": "D:\\skills\\workflow-os\\outputs\\skills\\openclaw-security-audit\\reports",
+        "notes": "Migrate durable reports here instead of leaving them inside the skill folder."
+      },
+      "notes": [
+        "Already has report generation behavior that should be redirected into Workflow OS managed outputs."
+      ]
+    },
+    {
+      "skill_id": "project-goal-lock",
+      "recommended_slug": "project-goal-lock",
+      "display_name": "Project Goal Lock",
+      "skill_path": "D:\\skills\\skills\\project-goal-lock",
+      "description": "Freeze project objective, scope, constraints, and acceptance criteria before delivery work begins.",
+      "resource_dirs": ["agents", "references"],
+      "ui_metadata_path": "D:\\skills\\skills\\project-goal-lock\\agents\\openai.yaml",
+      "managed_output": {
+        "mode": "managed-output",
+        "root": "D:\\skills\\workflow-os\\outputs\\skills\\project-goal-lock\\locks",
+        "notes": "Store frozen goal lock records, change deltas, and acceptance snapshots here."
+      },
+      "notes": []
+    },
+    {
+      "skill_id": "project-handoff",
+      "recommended_slug": "project-handoff",
+      "display_name": "Project Handoff",
+      "skill_path": "D:\\skills\\skills\\project-handoff",
+      "description": "Create and refresh durable handoff notes for later sessions or devices.",
+      "resource_dirs": ["agents", "references"],
+      "ui_metadata_path": "D:\\skills\\skills\\project-handoff\\agents\\openai.yaml",
+      "managed_output": {
+        "mode": "project-root-plus-mirror",
+        "root": "D:\\skills\\workflow-os\\outputs\\skills\\project-handoff",
+        "notes": "Primary handoff may still live in the target project root; mirror copies or indexes here when needed."
+      },
+      "notes": [
+        "Exception skill because the artifact is intentionally anchored to the target project root."
+      ]
+    },
+    {
+      "skill_id": "project-mainline-progress",
+      "recommended_slug": "project-mainline-progress",
+      "display_name": "Project Mainline Progress",
+      "skill_path": "D:\\skills\\skills\\project-mainline-progress",
+      "description": "Track mainline project progress with optional side branches and render readable status views.",
+      "resource_dirs": ["agents", "references", "scripts"],
+      "ui_metadata_path": "D:\\skills\\skills\\project-mainline-progress\\agents\\openai.yaml",
+      "managed_output": {
+        "mode": "project-root-plus-mirror",
+        "root": "D:\\skills\\workflow-os\\outputs\\skills\\project-mainline-progress\\snapshots",
+        "notes": "The canonical PROJECT_PROGRESS.md may remain in the target project root; save snapshots here when centralized history is useful."
+      },
+      "notes": [
+        "Has an existing helper script that can be reused in Workflow OS."
+      ]
+    },
+    {
+      "skill_id": "project-open-source-scout",
+      "recommended_slug": "project-open-source-scout",
+      "display_name": "Project Open Source Scout",
+      "skill_path": "D:\\skills\\skills\\project-open-source-scout",
+      "description": "Research reusable open-source foundations before starting greenfield implementation.",
+      "resource_dirs": ["agents", "references"],
+      "ui_metadata_path": "D:\\skills\\skills\\project-open-source-scout\\agents\\openai.yaml",
+      "managed_output": {
+        "mode": "managed-output",
+        "root": "D:\\skills\\workflow-os\\outputs\\skills\\project-open-source-scout\\research",
+        "notes": "Store scouting reports, candidate comparisons, and final reuse decisions here."
+      },
+      "notes": []
+    },
+    {
+      "skill_id": "workspace-memory",
+      "recommended_slug": "workspace-memory",
+      "display_name": "Workspace Memory",
+      "skill_path": "D:\\skills\\skills\\workspace-memory",
+      "description": "Write and reuse workspace-local memory notes with one dated file per day.",
+      "resource_dirs": ["agents", "references"],
+      "ui_metadata_path": "D:\\skills\\skills\\workspace-memory\\agents\\openai.yaml",
+      "managed_output": {
+        "mode": "workspace-memory-root",
+        "root": "D:\\skills\\workflow-os\\memory",
+        "notes": "This skill writes directly into the workspace memory root rather than outputs/skills."
+      },
+      "notes": [
+        "Special-case output root by design."
+      ]
+    }
+  ]
+}

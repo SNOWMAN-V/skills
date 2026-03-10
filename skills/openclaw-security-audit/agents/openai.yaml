@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenClaw Security Audit"
+  short_description: "Audit OpenClaw security and write review reports"
+  default_prompt: "Use $openclaw-security-audit to inspect an OpenClaw workspace, apply only safe low-risk fixes, and write a report to D:/skills/skills/openclaw-security-audit/reports."

@@ -1,0 +1,54 @@
+﻿{
+  "version": 1,
+  "generated_at": "2026-03-11",
+  "tools": [
+    {
+      "tool_id": "codex",
+      "display_name": "Codex",
+      "category": "agent",
+      "local_path": null,
+      "remote_capable": false,
+      "notes": "Primary interactive coding and orchestration agent environment."
+    },
+    {
+      "tool_id": "opencode",
+      "display_name": "OpenCode",
+      "category": "editor-agent",
+      "local_path": null,
+      "remote_capable": false,
+      "notes": "Secondary code-editing and agent execution surface."
+    },
+    {
+      "tool_id": "antigravity",
+      "display_name": "Antigravity",
+      "category": "editor-agent",
+      "local_path": "C:\\Users\\10144\\.antigravity",
+      "remote_capable": false,
+      "notes": "Alternate local editor and extension surface used in the broader workflow."
+    },
+    {
+      "tool_id": "openclaw",
+      "display_name": "OpenClaw",
+      "category": "remote-execution",
+      "local_path": "D:\\Openclaw\\openclaw",
+      "remote_capable": true,
+      "notes": "Mobile-to-PC remote execution plane that must remain in the architecture."
+    },
+    {
+      "tool_id": "github",
+      "display_name": "GitHub",
+      "category": "sync",
+      "local_path": null,
+      "remote_capable": true,
+      "notes": "Primary remote sync and source hosting target. Requires strict safety checks before push."
+    },
+    {
+      "tool_id": "sqlite",
+      "display_name": "SQLite",
+      "category": "database",
+      "local_path": "D:\\skills\\workflow-os\\data\\workflow_os.db",
+      "remote_capable": false,
+      "notes": "Primary local-first data store for Workflow OS."
+    }
+  ]
+}

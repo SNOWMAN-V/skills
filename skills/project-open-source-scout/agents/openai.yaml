@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Project Open Source Scout"
+  short_description: "Search reusable open-source projects before building"
+  default_prompt: "Use $project-open-source-scout to research whether this project idea already has reusable open-source implementations before we build it ourselves."

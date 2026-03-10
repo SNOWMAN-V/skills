@@ -2,4 +2,5 @@
 !.gitignore
 !skills/
 !skills/**
-
+!workflow-os/
+!workflow-os/**
